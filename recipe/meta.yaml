@@ -1,6 +1,6 @@
 {% set name = "double-conversion" %}
-{% set version = "3.0.1" %}
-{% set sha256 = "d400c86417df2980b60dc27ad68249dd124964738916d20cdc9c90b42de86490" %}
+{% set version = "3.1.1" %}
+{% set sha256 = "c49a6b3fa9c917f827b156c8e0799ece88ae50440487a99fc2f284cfd357a5b9" %}
 
 package:
   name: {{ name|lower }}
