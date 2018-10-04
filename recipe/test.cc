@@ -1,17 +1,23 @@
 #include "double-conversion/double-conversion.h"
-#include "double-conversion/bignum.h"
 
 using namespace double_conversion;
 
-Bignum::Bignum()
-    : bigits_buffer_(), bigits_(bigits_buffer_, kBigitCapacity), used_digits_(0), exponent_(0) {
-  for (int i = 0; i < kBigitCapacity; ++i) {
-    bigits_[i] = 0;
-  }
-}
-
 int main (void) {
-    Bignum bignum;
-    return 0;
+  auto flags = StringToDoubleConverter::ALLOW_CASE_INSENSIBILITY;
+  double junk_value = 3.1415;
+  StringToDoubleConverter converter(flags, junk_value, junk_value, "inf", "nan");
+
+  const char test_string[] = "1.5";
+  int processed_length;
+
+  double test_value = converter.StringToFloat(test_string, 3 /* length */,
+                                              &processed_length);
+  if (processed_length != 3) {
+    return 1;
+  }
+  if (test_value != 1.5) {
+    return 2;
+  }
+  return 0;
 }
 
