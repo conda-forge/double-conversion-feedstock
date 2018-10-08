@@ -3,8 +3,8 @@
 using namespace double_conversion;
 
 int main (void) {
-  auto flags = StringToDoubleConverter::ALLOW_CASE_INSENSIBILITY;
-  double junk_value = 3.1415;
+  const int flags = StringToDoubleConverter::ALLOW_CASE_INSENSIBILITY;
+  const double junk_value = 3.1415;
   StringToDoubleConverter converter(flags, junk_value, junk_value, "inf", "nan");
 
   const char test_string[] = "1.5";
