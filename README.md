@@ -20,7 +20,7 @@ Current build status
 
 [![Linux](https://img.shields.io/circleci/project/github/conda-forge/double-conversion-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/double-conversion-feedstock)
 [![OSX](https://img.shields.io/travis/conda-forge/double-conversion-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/double-conversion-feedstock)
-![Windows disabled](https://img.shields.io/badge/Windows-disabled-lightgrey.svg)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/double-conversion-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/double-conversion-feedstock/branch/master)
 
 Current release info
 ====================
