@@ -1,6 +1,6 @@
 {% set name = "double-conversion" %}
-{% set version = "3.1.1" %}
-{% set sha256 = "c49a6b3fa9c917f827b156c8e0799ece88ae50440487a99fc2f284cfd357a5b9" %}
+{% set version = "3.1.2" %}
+{% set sha256 = "2a9795dd9e56fbc616f8d51833fbd706a10c965ec588d1a5557af8b129cdb5b0" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1002
+  number: 0
   detect_binary_files_with_prefix: true
 
 requirements:
