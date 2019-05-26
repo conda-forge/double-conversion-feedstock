@@ -169,5 +169,6 @@ Feedstock Maintainers
 =====================
 
 * [@pearu](https://github.com/pearu/)
+* [@xhochy](https://github.com/xhochy/)
 * [@xmnlab](https://github.com/xmnlab/)
 
