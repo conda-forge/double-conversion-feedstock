@@ -1,6 +1,6 @@
 {% set name = "double-conversion" %}
-{% set version = "3.1.4" %}
-{% set sha256 = "95004b65e43fefc6100f337a25da27bb99b9ef8d4071a36a33b5e83eb1f82021" %}
+{% set version = "3.1.5" %}
+{% set sha256 = "a63ecb93182134ba4293fd5f22d6e08ca417caafa244afaa751cbfddf6415b13" %}
 
 package:
   name: {{ name|lower }}
@@ -47,3 +47,4 @@ extra:
   recipe-maintainers:
     - xmnlab
     - pearu
+    - xhochy
