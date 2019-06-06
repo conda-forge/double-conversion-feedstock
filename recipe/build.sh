@@ -1,7 +1,11 @@
 #!/bin/bash
 
 # Build shared lib
-cmake . -DCMAKE_INSTALL_PREFIX=$PREFIX -DBUILD_SHARED_LIBS=ON -DBUILD_TESTING=ON
+cmake . \
+    -DCMAKE_INSTALL_PREFIX=$PREFIX \
+    -DCMAKE_INSTALL_LIBDIR=lib \
+    -DBUILD_SHARED_LIBS=ON \
+    -DBUILD_TESTING=ON
 make -j
 
 test/cctest/cctest --list | tr -d '<' | xargs test/cctest/cctest
