@@ -12,8 +12,10 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 2
   detect_binary_files_with_prefix: true
+  run_exports:
+    - {{ pin_subpackage('double-conversion', max_pin='x.x') }}
 
 requirements:
   build:
@@ -29,9 +31,8 @@ test:
   files:
     - test.cc
   commands:
-    - test -f $PREFIX/lib/libdouble-conversion.a      # [unix]
-    - test -f $PREFIX/lib/libdouble-conversion.so     # [linux]
-    - test -f $PREFIX/lib/libdouble-conversion.dylib  # [osx]
+    - test -f $PREFIX/lib/libdouble-conversion.a            # [unix]
+    - test -f $PREFIX/lib/libdouble-conversion${SHLIB_EXT}  # [unix]
 
 about:
   home: http://github.com/google/double-conversion
