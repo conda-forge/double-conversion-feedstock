@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Build shared lib
-cmake . \
+cmake ${CMAKE_ARGS} . \
     -DCMAKE_INSTALL_PREFIX=$PREFIX \
     -DCMAKE_INSTALL_LIBDIR=lib \
     -DBUILD_SHARED_LIBS=ON \
