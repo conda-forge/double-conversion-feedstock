@@ -1,6 +1,6 @@
 {% set name = "double-conversion" %}
-{% set version = "3.1.5" %}
-{% set sha256 = "a63ecb93182134ba4293fd5f22d6e08ca417caafa244afaa751cbfddf6415b13" %}
+{% set version = "3.1.6" %}
+{% set sha256 = "8a79e87d02ce1333c9d6c5e47f452596442a343d8c3e9b234e8a62fce1b1d49c" %}
 
 package:
   name: {{ name|lower }}
@@ -8,11 +8,11 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://github.com/google/{{name}}/archive/v{{version}}.tar.gz
+  url: https://github.com/google/{{ name }}/archive/v{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
-  number: 2
+  number: 0
   detect_binary_files_with_prefix: true
   run_exports:
     - {{ pin_subpackage('double-conversion', max_pin='x.x') }}
@@ -39,7 +39,7 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: 'Efficient binary-decimal and decimal-binary conversion routines for IEEE doubles.'
+  summary: Efficient binary-decimal and decimal-binary conversion routines for IEEE doubles.
 
   description: |
     double-conversion provides binary-decimal and decimal-binary routines for IEEE doubles.
