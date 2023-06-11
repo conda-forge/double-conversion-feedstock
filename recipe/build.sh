@@ -1,5 +1,8 @@
 #!/bin/bash
 
+export CFLAGS="${CFLAGS} -D__STDC_FORMAT_MACROS"
+export CXXFLAGS="${CXXFLAGS} -D__STDC_FORMAT_MACROS"
+
 # Build static lib
 cmake ${CMAKE_ARGS} . \
     -DCMAKE_INSTALL_PREFIX=$PREFIX \
